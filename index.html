@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/3b22ed81ba.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="testimonial">
+            <div class="testimonial-text">
+                <div class="user-text">
+                    <img src="./img/FURIA_FND_PRETO.png" class="fa-solid">
+                    
+                    <p>
+                        Andrei Piovezan (born March 27, 1996) is a Brazilian professional Counter-Strike: Global Offensive player who plays for FURIA Esports as the in-game leader and an entry fragger.
+                    </p>
+                    <span>
+                        Art
+                    </span>
+                </div>
+                <div class="user-text active-text">
+                    <img src="./img/FURIA_FND_PRETO.png" class="fa-solid">
+                    <p>
+                        Yuri Boian (born December 22, 1999) is a Brazilian professional Counter-Strike: Global Offensive player for FURIA Esports.
+                    </p>
+                    <span>
+                        yuurih
+                    </span>
+                </div>
+                <div class="user-text">
+                    <img src="./img/FURIA_FND_PRETO.png" class="fa-solid">
+                    <p>
+                        Kaike Cerato (formerly stylized as kscerato) (born September 12, 1999) is a Brazilian professional Counter-Strike: Global Offensive player for FURIA Esports. He is Kauan "KNCERATO" Cerato's brother and Adriano "WOOD7" Cerato's cousin.
+                    </p>
+                    <span>
+                        KSCERATO
+                    </span>
+                </div>
+                <div class="user-text">
+                    <img src="./img/FURIA_FND_PRETO.png" class="fa-solid">
+                    <p>
+                        André Abreu (born January 15, 2004) is a Brazilian professional Counter-Strike: Global Offensive player for FURIA Esports.
+
+                        drop was previously banned from Valve-sponsored events due to a VAC ban issued in 2016 for using a skin changer, but has been unbanned following Counter-Strike's "New RMR Eligibility Guidelines" blog post.
+                    </p>
+                    <span>
+                        drop
+                    </span>
+                </div>
+                <div class="user-text">
+                    <img src="./img/FURIA_FND_PRETO.png" class="fa-solid">
+                    <p>
+                        Rafael Costa (pronounced as safe) (born December 19, 1994) is a Brazilian professional Counter-Strike: Global Offensive player for FURIA Esports and a former semi-professional Counter-Strike player.
+                    </p>
+                    <span>
+                        saffee
+                    </span>
+                </div>
+                <div class="user-text">
+                    <img src="./img/FURIA_FND_PRETO.png" class="fa-solid">
+                    <p>
+                        Nicholas "guerri" Nogueira (born May 25, 1990) is a Brazilian professional Counter-Strike: Global Offensive coach for FURIA Esports and a retired professional Counter-Strike: Global Offensive and Counter-Strike player.
+                    </p>
+                    <span>
+                        guerri
+                    </span>
+                </div>
+            </div>
+            <div class="testimonial-pic">
+                <img src="./img/art.webp" class="user-pic" onclick="showReview()">
+                <img src="./img/yuurih.webp" class="user-pic active-pic" onclick="showReview()">
+                <img src="./img/kscerato.webp" class="user-pic" onclick="showReview()">
+                <img src="./img/drop.webp" class="user-pic" onclick="showReview()">
+                <img src="./img/saffe.webp" class="user-pic" onclick="showReview()">
+                <img src="./img/guerri.webp" class="user-pic" onclick="showReview()">
+        </div>
+    </div>
+    <script>
+        let userTexts = document.getElementsByClassName("user-text");
+        let userPics = document.getElementsByClassName("user-pic");
+
+        function showReview(){
+            for (userPic of userPics){
+                userPic.classList.remove("active-pic")
+            }
+            for(userText of userTexts){
+                userText.classList.remove("active-text");
+            }
+            let i = Array.from(userPics).indexOf(event.target);
+            userPics[i].classList.add("active-pic")
+            userTexts[i].classList.add("active-text")
+        }
+    </script>
+</body>
+</html>
